@@ -5,7 +5,7 @@ import { BLOG_POSTS } from "@/components/sections/blog-index";
 import { notFound } from "next/navigation";
 
 // Mock content generator
-const generateMockContent = (title: string) => (
+const generateMockContent = () => (
     <>
         <p className="lead">
             Es ist ein offenes Geheimnis im Handwerk: Gute Mitarbeiter wachsen nicht auf Bäumen.
@@ -55,7 +55,7 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
             avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop",
             role: "Gründer & Stratege"
         },
-        content: generateMockContent(postData.title)
+        content: generateMockContent()
     };
 
     return (
