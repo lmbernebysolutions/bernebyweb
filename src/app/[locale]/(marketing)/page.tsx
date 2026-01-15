@@ -14,7 +14,6 @@ import { WebMarketingSection } from "@/components/sections/web-marketing";
 import { RevierBackground } from "@/components/ui/revier-background";
 import { ScrollGuide } from "@/components/ui/scroll-guide";
 import { SectionTrailDivider } from "@/components/ui/section-trail-divider";
-import { Watermark } from "@/components/ui/watermark";
 
 export default function MarketingPage() {
   return (
