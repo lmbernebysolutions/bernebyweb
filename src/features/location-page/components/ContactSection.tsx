@@ -22,7 +22,6 @@ interface ContactSectionProps {
  */
 export function ContactSection({
   cityName,
-  coordinates,
   className,
 }: ContactSectionProps) {
   const [formState, setFormState] = React.useState({
@@ -54,10 +53,7 @@ export function ContactSection({
     }));
   };
 
-  // Google Maps Embed URL
-  const mapUrl = coordinates
-    ? `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6CE&q=${coordinates.lat},${coordinates.lng}&zoom=13`
-    : `https://www.google.com/maps/embed/v1/place?key=AIzaSyBFw0Qbyq9zTFTd-tUY6CE&q=${encodeURIComponent(cityName + ", Deutschland")}&zoom=13`;
+  // Google Maps Embed URL (mapUrl removed - not used)
 
   return (
     <section

@@ -94,7 +94,7 @@ export default function DachdeckerOverviewPage() {
                     {region}
                   </h3>
                   <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-                    {citiesByRegion[region].map((city) => (
+                    {(citiesByRegion[region] || []).map((city) => (
                       <Link
                         key={city.slug}
                         href={`/dachdecker/${city.slug}`}

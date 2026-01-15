@@ -12,8 +12,6 @@ export const Solution4PremiumPositioning = ({ progress }: Solution4Props) => {
     const presentationY = useTransform(progress, [0, 0.3], [50, 0]);
     const certificatesOpacity = useTransform(progress, [0.3, 0.6], [0, 1]);
     const certificatesScale = useTransform(progress, [0.3, 0.6], [0.9, 1]);
-    const customerOpacity = useTransform(progress, [0.4, 0.7], [0, 1]);
-    const customerX = useTransform(progress, [0.4, 0.7], [50, 0]);
     const bookingButtonOpacity = useTransform(progress, [0.5, 0.8], [0, 1]);
     const checkMarkOpacity = useTransform(progress, [0.6, 0.9], [0, 1]);
     const checkMarkScale = useTransform(progress, [0.6, 0.9], [0, 1]);

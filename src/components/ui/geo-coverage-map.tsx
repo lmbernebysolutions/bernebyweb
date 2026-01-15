@@ -2,7 +2,6 @@
 
 import dynamic from 'next/dynamic';
 import { cn } from '@/lib/utils';
-import { useState, useEffect } from 'react';
 
 // Dynamically import the map client with no SSR
 const GeoMapClient = dynamic(() => import('./geo-map-client'), {

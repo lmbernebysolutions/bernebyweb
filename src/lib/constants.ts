@@ -2,7 +2,6 @@ import {
     USP,
     Testimonial,
     CaseStudy,
-    VerticalFunnel,
     PricingPlan,
     NavigationItem,
     StatsMetric

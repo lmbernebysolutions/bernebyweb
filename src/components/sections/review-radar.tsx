@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { ReviewTimeline } from "@/components/ui/review-timeline";
 import { ScanEye, Star, MessageSquareWarning, ThumbsUp } from "lucide-react";
-import { fadeInUp, slideInFromRight } from "@/lib/animation-utils";
+import { slideInFromRight } from "@/lib/animation-utils";
 import ShimmerButton from "@/components/libraries/magic-ui/shimmer-button";
 
 export const ReviewRadarSection = () => {

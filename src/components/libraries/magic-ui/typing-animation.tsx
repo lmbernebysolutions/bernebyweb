@@ -7,7 +7,6 @@ interface TypingAnimationProps {
     children: string;
     className?: string;
     duration?: number;
-    delay?: number;
     startOnView?: boolean;
 }
 
@@ -15,7 +14,6 @@ export const TypingAnimation = ({
     children,
     className,
     duration = 100,
-    delay = 0,
     startOnView = true,
 }: TypingAnimationProps) => {
     const [displayedText, setDisplayedText] = useState("");
@@ -31,7 +29,7 @@ export const TypingAnimation = ({
         if (!started && startOnView) {
             const observer = new IntersectionObserver(
                 (entries) => {
-                    if (entries[0].isIntersecting) {
+                    if (entries[0]?.isIntersecting) {
                         setStarted(true);
                         observer.disconnect();
                     }
@@ -44,6 +42,7 @@ export const TypingAnimation = ({
 
             return () => observer.disconnect();
         }
+        return undefined;
     }, [started, startOnView, children]);
 
     useEffect(() => {

@@ -10,7 +10,6 @@ export const Solution2PremiumWeb = ({ progress }: Solution2Props) => {
     const websiteOpacity = useTransform(progress, [0, 0.3], [0, 1]);
     const websiteScale = useTransform(progress, [0, 0.3], [0.8, 1]);
     const websiteY = useTransform(progress, [0, 0.3], [50, 0]);
-    const workersOpacity = useTransform(progress, [0.3, 0.6], [0, 1]);
     const workersY = useTransform(progress, [0.3, 0.6], [30, 0]);
     const worksiteOpacity = useTransform(progress, [0.4, 0.7], [0, 1]);
 

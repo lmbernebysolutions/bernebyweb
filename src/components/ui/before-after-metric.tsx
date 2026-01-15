@@ -1,8 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
-import { CountUp } from "@/components/ui/count-up"; // We might need to implement this or use a library, for now simple text or NumberTicker
+// We might need to implement this or use a library, for now simple text or NumberTicker
 
 // Re-using NumberTicker from Magic UI would be best if available, distinct component otherwise
 // Let's assume we can use a simple span or the NumberTicker we installed in Phase 0B

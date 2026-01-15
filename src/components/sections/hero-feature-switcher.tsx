@@ -113,7 +113,7 @@ export const HeroFeatureSwitcher = () => {
                 {/* Glow Effect */}
                 <div className={cn(
                     "absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] rounded-full blur-[100px] opacity-20 transition-colors duration-1000 bg-gradient-to-r",
-                    FEATURES[activeTab].color
+                    FEATURES[activeTab]?.color
                 )} />
 
                 <AnimatePresence mode="wait">
@@ -125,7 +125,7 @@ export const HeroFeatureSwitcher = () => {
                         transition={{ duration: 0.5, ease: "circOut" }}
                         className="absolute inset-0 flex items-center justify-center p-6"
                     >
-                        {FEATURES[activeTab].component}
+                        {FEATURES[activeTab]?.component}
                     </motion.div>
                 </AnimatePresence>
             </div>

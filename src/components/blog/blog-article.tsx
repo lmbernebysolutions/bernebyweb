@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowLeft, Calendar, Clock, Tag, Share2 } from "lucide-react";
-import { cn } from "@/lib/utils";
+import { ArrowLeft, Calendar, Clock, Share2 } from "lucide-react";
 
 interface BlogPostProps {
     title: string;

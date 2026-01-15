@@ -1,8 +1,6 @@
 "use client";
 
-import { useMemo } from "react";
 import { Area, AreaChart, ResponsiveContainer, Tooltip, XAxis } from "recharts";
-import { motion } from "framer-motion";
 
 const data = [
     { day: "Mo", calls: 12, leads: 4 },

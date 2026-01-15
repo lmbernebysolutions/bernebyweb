@@ -29,7 +29,8 @@ export const StickyScroll = ({
         const closestBreakpointIndex = cardsBreakpoints.reduce(
             (acc, breakpoint, index) => {
                 const distance = Math.abs(latest - breakpoint);
-                if (distance < Math.abs(latest - cardsBreakpoints[acc])) {
+                const accBreakpoint = cardsBreakpoints[acc];
+                if (accBreakpoint !== undefined && distance < Math.abs(latest - accBreakpoint)) {
                     return index;
                 }
                 return acc;
@@ -69,7 +70,7 @@ export const StickyScroll = ({
                         contentClassName
                     )}
                 >
-                    {content[activeCard].content ?? null}
+                    {content[activeCard]?.content ?? null}
                 </motion.div>
 
                 {/* Scrollable Content Section (Right 40%) */}

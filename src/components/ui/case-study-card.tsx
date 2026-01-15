@@ -3,7 +3,6 @@
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { BeforeAfterMetric } from "@/components/ui/before-after-metric";
-import ShimmerButton from "@/components/libraries/magic-ui/shimmer-button";
 import { Quote } from "lucide-react";
 
 export interface CaseStudyProps {

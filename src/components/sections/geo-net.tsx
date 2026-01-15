@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { Globe } from "@/components/ui/globe";
 import { CheckCircle2 } from "lucide-react";
-import { fadeInUp, slideInFromLeft } from "@/lib/animation-utils";
+import { slideInFromLeft } from "@/lib/animation-utils";
 import InteractiveHoverButton from "@/components/libraries/magic-ui/interactive-hover-button";
 
 export const GeoNetSection = () => {

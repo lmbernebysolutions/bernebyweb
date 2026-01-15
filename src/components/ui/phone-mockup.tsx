@@ -11,8 +11,6 @@ export const PhoneMockup = () => {
 
     // Simulate flow
     useEffect(() => {
-        let timer: NodeJS.Timeout;
-
         const sequence = async () => {
             // Incoming -> Active
             await new Promise(r => setTimeout(r, 2000));
@@ -29,7 +27,10 @@ export const PhoneMockup = () => {
 
             for (let i = 0; i < messages.length; i++) {
                 await new Promise(r => setTimeout(r, 1500));
-                setTranscript(prev => [...prev, messages[i]]);
+                const message = messages[i];
+                if (message) {
+                    setTranscript(prev => [...prev, message]);
+                }
             }
 
             await new Promise(r => setTimeout(r, 2000));
@@ -42,8 +43,6 @@ export const PhoneMockup = () => {
         };
 
         sequence();
-
-        return () => clearTimeout(timer);
     }, []);
 
     return (

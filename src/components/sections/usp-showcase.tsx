@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart3, Map, PhoneCall, Layout, BellIcon, FileTextIcon, Globe } from "lucide-react";
+import { BarChart3, Map, PhoneCall, Layout, Globe } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { motion } from "framer-motion";
 import Image from "next/image";

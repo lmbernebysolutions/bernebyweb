@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
@@ -55,7 +54,7 @@ export const BlogIndex = () => {
                 </div>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    {BLOG_POSTS.map((post, i) => (
+                    {BLOG_POSTS.map((post) => (
                         <Link key={post.slug} href={`/blog/${post.slug}`}>
                             <SpotlightCard className="h-full bg-slate-900/50 border-white/10 overflow-hidden flex flex-col group p-0">
                                 <div className="relative h-64 w-full overflow-hidden">

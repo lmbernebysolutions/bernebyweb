@@ -1,9 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Globe, Layout, Palette, Share2, Smartphone, Zap } from "lucide-react";
+import { Globe, Layout, Share2, Smartphone, Zap } from "lucide-react";
 import Image from "next/image";
-import { fadeInUp, slideInFromLeft } from "@/lib/animation-utils";
+import { fadeInUp } from "@/lib/animation-utils";
 import InteractiveHoverButton from "@/components/libraries/magic-ui/interactive-hover-button";
 
 export const WebMarketingSection = () => {

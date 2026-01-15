@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import InteractiveHoverButton from "@/components/libraries/magic-ui/interactive-hover-button";
 import { staggerContainer, fadeInUp } from "@/lib/animation-utils";
-import { HeroHighlight, Highlight } from "@/components/ui/hero-highlight";
 
 export const HeroContent = () => {
     return (

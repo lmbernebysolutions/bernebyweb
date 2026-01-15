@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 import { HeroParallax } from "@/components/libraries/aceternity/hero-parallax";
 
 export const PortfolioParallax = () => {

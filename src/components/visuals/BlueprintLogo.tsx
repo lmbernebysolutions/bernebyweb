@@ -2,7 +2,6 @@
 
 import React from "react";
 import { motion } from "framer-motion";
-import { BernebyLogo } from "@/components/icons/BernebyLogo";
 import { cn } from "@/lib/utils";
 
 interface BlueprintLogoProps {

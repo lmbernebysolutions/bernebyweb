@@ -1,9 +1,8 @@
 "use client";
 
 import { motion, useScroll, useTransform, AnimatePresence } from "framer-motion";
-import { useRef, useState, useEffect } from "react";
+import { useRef, useState } from "react";
 import { AlertCircle, CheckCircle2 } from "lucide-react";
-import { cn } from "@/lib/utils";
 import { Problem1Unsichtbarkeit } from "./scroll-story/Problem1Unsichtbarkeit";
 import { Solution1GeoNet } from "./scroll-story/Solution1GeoNet";
 import { Problem2Fachkraeftemangel } from "./scroll-story/Problem2Fachkraeftemangel";
@@ -129,12 +128,14 @@ export const SolutionReveal = () => {
 
 
                     <AnimatePresence mode="wait">
-                        <RevealSlide
-                            key={activeIndex}
-                            step={revealSteps[activeIndex]}
-                            index={activeIndex}
-                            progress={scrollYProgress}
-                        />
+                        {revealSteps[activeIndex] && (
+                            <RevealSlide
+                                key={activeIndex}
+                                step={revealSteps[activeIndex]}
+                                index={activeIndex}
+                                progress={scrollYProgress}
+                            />
+                        )}
                     </AnimatePresence>
                 </div>
             </div>

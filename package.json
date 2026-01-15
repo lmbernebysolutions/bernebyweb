@@ -72,6 +72,7 @@
     "@tailwindcss/postcss": "^4.1.18",
     "@types/node": "^24.10.4",
     "@types/react": "^19.2.7",
+    "@types/three": "^0.182.0",
     "@vitejs/plugin-react": "^5.1.2",
     "@vitest/browser": "^4.0.16",
     "@vitest/browser-playwright": "^4.0.16",
