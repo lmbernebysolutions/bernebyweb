@@ -1,0 +1,131 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .eber-body { fill: #021A33; }
+      .eber-accent { fill: #01FAF9; }
+      .eber-outline { stroke: #ffffff; stroke-width: 3; fill: none; }
+      .cyan-accent { fill: #01FAF9; }
+      .text-color { fill: #ffffff; }
+      
+      .eber-enter {
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+      }
+      
+      .customer-enter {
+        animation: slideInRight 1.2s ease-out 0.3s forwards;
+        opacity: 0;
+      }
+      
+      .premium-presentation-enter {
+        animation: fadeInScale 1s ease-out 0.6s forwards;
+        opacity: 0;
+        transform-origin: center;
+      }
+      
+      .check-mark-enter {
+        animation: popIn 0.8s ease-out 1.2s forwards;
+        opacity: 0;
+        transform-origin: center;
+      }
+      
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(50px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      
+      @keyframes fadeInScale {
+        from { opacity: 0; transform: scale(0.8); }
+        to { opacity: 1; transform: scale(1); }
+      }
+      
+      @keyframes popIn {
+        from { opacity: 0; transform: scale(0); }
+        to { opacity: 1; transform: scale(1); }
+      }
+    </style>
+  </defs>
+  
+  <!-- Hintergrund -->
+  <rect width="800" height="800" fill="#021A33"/>
+  
+  <!-- Premium-Präsentation/Website -->
+  <g class="premium-presentation-enter">
+    <rect x="200" y="250" width="400" height="350" rx="10" fill="#1a1a1a" stroke="#01FAF9" stroke-width="3"/>
+    <rect x="210" y="260" width="380" height="330" rx="5" fill="#2a2a2a"/>
+    
+    <!-- Premium Content -->
+    <rect x="230" y="280" width="340" height="40" rx="5" fill="#01FAF9" opacity="0.3"/>
+    <text x="400" y="305" class="cyan-accent" font-size="20" font-family="Arial" font-weight="bold" text-anchor="middle">Premium Qualität</text>
+    
+    <!-- Zertifikate/Referenzen -->
+    <rect x="240" y="340" width="80" height="60" rx="5" fill="#01FAF9" opacity="0.2" stroke="#01FAF9" stroke-width="1"/>
+    <text x="280" y="375" class="cyan-accent" font-size="10" font-family="Arial" text-anchor="middle">Zertifikat</text>
+    
+    <rect x="340" y="340" width="80" height="60" rx="5" fill="#01FAF9" opacity="0.2" stroke="#01FAF9" stroke-width="1"/>
+    <text x="380" y="375" class="cyan-accent" font-size="10" font-family="Arial" text-anchor="middle">Referenz</text>
+    
+    <rect x="440" y="340" width="80" height="60" rx="5" fill="#01FAF9" opacity="0.2" stroke="#01FAF9" stroke-width="1"/>
+    <text x="480" y="375" class="cyan-accent" font-size="10" font-family="Arial" text-anchor="middle">Award</text>
+    
+    <!-- Qualität statt Preis -->
+    <text x="400" y="450" class="text-color" font-size="16" font-family="Arial" text-anchor="middle">Wert & Expertise</text>
+    <text x="400" y="480" class="text-color" font-size="14" font-family="Arial" text-anchor="middle" opacity="0.7">Nicht nur Preis</text>
+    
+    <!-- Buchungs-Button -->
+    <rect x="300" y="520" width="200" height="50" rx="5" fill="#01FAF9" opacity="0.8"/>
+    <text x="400" y="550" class="text-color" font-size="16" font-family="Arial" font-weight="bold" text-anchor="middle">Jetzt buchen</text>
+  </g>
+  
+  <!-- Check Mark -->
+  <g class="check-mark-enter" transform="translate(400, 650)">
+    <circle cx="0" cy="0" r="40" fill="#01FAF9" opacity="0.8"/>
+    <path d="M -15,-5 L -5,5 L 15,-10" stroke="#021A33" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+  </g>
+  
+  <!-- Kunde - überzeugt -->
+  <g class="customer-enter" transform="translate(500, 150)">
+    <!-- Kunde (vereinfacht als Kreis) -->
+    <circle cx="0" cy="0" r="40" fill="#666"/>
+    <ellipse cx="-10" cy="-10" rx="5" ry="8" fill="#ffffff"/>
+    <ellipse cx="10" cy="-10" rx="5" ry="8" fill="#ffffff"/>
+    <path d="M -15,10 Q 0,20 15,10" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    
+    <!-- Kunde zeigt auf Präsentation -->
+    <line x1="-40" y1="0" x2="-200" y2="200" stroke="#01FAF9" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Eber (Hauptcharakter) - selbstbewusst -->
+  <g class="eber-enter" transform="translate(200, 150)">
+    <!-- Eber Körper -->
+    <ellipse cx="100" cy="200" rx="80" ry="100" class="eber-body"/>
+    <path d="M 100,100 Q 80,80 60,100 Q 50,110 60,120 Q 70,115 80,120 Q 90,115 100,120 Q 110,115 120,120 Q 130,115 140,120 Q 150,110 140,100 Q 120,80 100,100" class="eber-body"/>
+    
+    <!-- Eber Augen - selbstbewusst -->
+    <ellipse cx="90" cy="180" rx="8" ry="12" class="eber-accent"/>
+    <ellipse cx="110" cy="180" rx="8" ry="12" class="eber-accent"/>
+    
+    <!-- Eber Schnauze -->
+    <ellipse cx="100" cy="200" rx="25" ry="20" class="eber-accent"/>
+    <ellipse cx="95" cy="195" rx="5" ry="5" fill="#021A33"/>
+    <ellipse cx="105" cy="195" rx="5" ry="5" fill="#021A33"/>
+    
+    <!-- Eber Stoßzähne -->
+    <path d="M 90,210 L 85,220 L 90,215 Z" fill="#ffffff"/>
+    <path d="M 110,210 L 115,220 L 110,215 Z" fill="#ffffff"/>
+    
+    <!-- Eber Umriss -->
+    <ellipse cx="100" cy="200" rx="80" ry="100" class="eber-outline"/>
+    <path d="M 100,100 Q 80,80 60,100 Q 50,110 60,120 Q 70,115 80,120 Q 90,115 100,120 Q 110,115 120,120 Q 130,115 140,120 Q 150,110 140,100 Q 120,80 100,100" class="eber-outline"/>
+  </g>
+  
+  <!-- Cyan Glow -->
+  <circle cx="400" cy="450" r="250" fill="#01FAF9" opacity="0.1">
+    <animate attributeName="opacity" values="0.1;0.15;0.1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

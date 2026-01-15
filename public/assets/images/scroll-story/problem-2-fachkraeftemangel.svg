@@ -1,0 +1,87 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .eber-body { fill: #021A33; }
+      .eber-accent { fill: #01FAF9; }
+      .eber-outline { stroke: #ffffff; stroke-width: 3; fill: none; }
+      .red-accent { fill: #EF4444; }
+      .text-color { fill: #ffffff; }
+      
+      .eber-enter {
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+      }
+      
+      .worksite-enter {
+        animation: fadeIn 1.2s ease-out 0.3s forwards;
+        opacity: 0;
+      }
+      
+      .empty-enter {
+        animation: fadeIn 1s ease-out 0.6s forwards;
+        opacity: 0;
+      }
+      
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Hintergrund -->
+  <rect width="800" height="800" fill="#021A33"/>
+  
+  <!-- Baustelle/Arbeitsplatz - LEER -->
+  <g class="worksite-enter">
+    <!-- Baustelle Rahmen -->
+    <rect x="200" y="300" width="400" height="300" rx="10" fill="#2a2a2a" stroke="#666" stroke-width="2" stroke-dasharray="10,5"/>
+    
+    <!-- Werkzeuge liegen rum -->
+    <rect x="250" y="350" width="40" height="20" rx="3" fill="#666" opacity="0.5"/>
+    <rect x="550" y="450" width="30" height="30" rx="15" fill="#666" opacity="0.5"/>
+    
+    <!-- Keine Personen sichtbar -->
+    <text x="350" y="450" class="text-color" font-size="24" font-family="Arial" opacity="0.3" text-anchor="middle">LEER</text>
+  </g>
+  
+  <!-- Eber (Hauptcharakter) - allein und überfordert -->
+  <g class="eber-enter" transform="translate(300, 100)">
+    <!-- Eber Körper -->
+    <ellipse cx="100" cy="200" rx="80" ry="100" class="eber-body"/>
+    <path d="M 100,100 Q 80,80 60,100 Q 50,110 60,120 Q 70,115 80,120 Q 90,115 100,120 Q 110,115 120,120 Q 130,115 140,120 Q 150,110 140,100 Q 120,80 100,100" class="eber-body"/>
+    
+    <!-- Eber Augen - besorgt -->
+    <path d="M 85,180 Q 90,185 95,180" stroke="#01FAF9" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 105,180 Q 110,185 115,180" stroke="#01FAF9" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Eber Schnauze -->
+    <ellipse cx="100" cy="200" rx="25" ry="20" class="eber-accent"/>
+    <ellipse cx="95" cy="195" rx="5" ry="5" fill="#021A33"/>
+    <ellipse cx="105" cy="195" rx="5" ry="5" fill="#021A33"/>
+    
+    <!-- Eber Stoßzähne -->
+    <path d="M 90,210 L 85,220 L 90,215 Z" fill="#ffffff"/>
+    <path d="M 110,210 L 115,220 L 110,215 Z" fill="#ffffff"/>
+    
+    <!-- Eber Umriss -->
+    <ellipse cx="100" cy="200" rx="80" ry="100" class="eber-outline"/>
+    <path d="M 100,100 Q 80,80 60,100 Q 50,110 60,120 Q 70,115 80,120 Q 90,115 100,120 Q 110,115 120,120 Q 130,115 140,120 Q 150,110 140,100 Q 120,80 100,100" class="eber-outline"/>
+  </g>
+  
+  <!-- Alte Website/Zeitung im Hintergrund -->
+  <g class="empty-enter" opacity="0.3">
+    <rect x="50" y="650" width="150" height="100" rx="5" fill="#1a1a1a" stroke="#666" stroke-width="1"/>
+    <text x="125" y="700" class="text-color" font-size="10" font-family="Arial" text-anchor="middle">Alte Website</text>
+  </g>
+  
+  <!-- Red Glow -->
+  <circle cx="400" cy="450" r="250" fill="#EF4444" opacity="0.1">
+    <animate attributeName="opacity" values="0.1;0.15;0.1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

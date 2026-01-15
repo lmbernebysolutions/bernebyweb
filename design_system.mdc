@@ -1,0 +1,22 @@
+# Design System: "Der Vertrauenswürdige Handwerker"
+
+## 1. Visuelle Philosophie
+[cite_start]Wir nutzen den Stil **"Minimalismus"** [cite: 1] [cite_start]kombiniert mit **"Handcrafted"** Elementen[cite: 31], um Authentizität und Professionalität auszustrahlen.
+* **Wirkung:** Aufgeräumt, fokussiert, aber mit persönlicher Note (kein steriles Tech-Design).
+* [cite_start]**Formensprache:** Klare Kanten, aber mit subtilen **"Organischen Formen"** [cite: 45] als Trenner zwischen Sektionen, um das Design zugänglicher zu machen.
+
+## 2. Typografie
+Wir setzen auf die bewährte Kombination **"Oswald & Merriweather"** (oder ähnlich) aus der Datenbank:
+* **Überschriften (H1-H3):** `Oswald` (Google Font). Ein robuster, geometrischer Font, der Stabilität und Kraft (Handwerk) vermittelt. Nutze `uppercase` für kleine Labels.
+* **Fließtext (Body):** `Merriweather` oder `Open Sans`. Hohe Lesbarkeit für Informationstexte.
+* [cite_start]**Größen:** Nutze `clamp()` für responsive Schriftgrößen (z.B. Hero-Headline), um Lesbarkeit auf allen Geräten zu sichern[cite: 68].
+
+## 3. Farbpalette
+[cite_start]Wir nutzen eine **"Komplementäre Farbpalette"**[cite: 5], um Handlungsaufforderungen (CTAs) hervorzuheben:
+* **Primärfarbe (Vertrauen):** Ein tiefes Navy-Blau (z.B. `#1e3a8a`). Vermittelt Seriosität und Beständigkeit.
+* **Akzentfarbe (Handlung):** Ein kräftiges Ziegel-Orange (z.B. `#ea580c`). [cite_start]Nutze dies sparsam NUR für Buttons und wichtige Highlights (60-30-10 Regel)[cite: 5].
+* **Hintergrund:** Viel Weißraum (`#ffffff`) und leichtes Grau (`#f8fafc`) zur Gliederung.
+
+## 4. UI-Komponenten (React Bits & Tailwind)
+* **Buttons:** Solide, rechteckige Buttons mit leichtem `box-shadow` für Tiefe. Keine extremen Rundungen.
+* [cite_start]**Karten:** Nutze ein **"Card-based Design"** [cite: 16] für Leistungen. Jede Karte hat einen feinen Rand und einen subtilen Hover-Effekt (Anhebung).

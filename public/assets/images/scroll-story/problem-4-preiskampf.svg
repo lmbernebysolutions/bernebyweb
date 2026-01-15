@@ -1,0 +1,116 @@
+<svg width="800" height="800" viewBox="0 0 800 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .eber-body { fill: #021A33; }
+      .eber-accent { fill: #01FAF9; }
+      .eber-outline { stroke: #ffffff; stroke-width: 3; fill: none; }
+      .red-accent { fill: #EF4444; }
+      .text-color { fill: #ffffff; }
+      
+      .eber-enter {
+        animation: fadeInUp 1s ease-out forwards;
+        opacity: 0;
+      }
+      
+      .customer-enter {
+        animation: slideInRight 1.2s ease-out 0.3s forwards;
+        opacity: 0;
+      }
+      
+      .price-comparison-enter {
+        animation: fadeIn 1s ease-out 0.6s forwards;
+        opacity: 0;
+      }
+      
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(30px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      
+      @keyframes slideInRight {
+        from { opacity: 0; transform: translateX(50px); }
+        to { opacity: 1; transform: translateX(0); }
+      }
+      
+      @keyframes fadeIn {
+        from { opacity: 0; }
+        to { opacity: 1; }
+      }
+    </style>
+  </defs>
+  
+  <!-- Hintergrund -->
+  <rect width="800" height="800" fill="#021A33"/>
+  
+  <!-- Preisvergleich-Tabelle -->
+  <g class="price-comparison-enter">
+    <rect x="200" y="300" width="400" height="300" rx="10" fill="#2a2a2a" stroke="#666" stroke-width="2"/>
+    
+    <!-- Überschrift -->
+    <text x="400" y="330" class="text-color" font-size="18" font-family="Arial" font-weight="bold" text-anchor="middle">Preisvergleich</text>
+    
+    <!-- Zeile 1 - Konkurrenz -->
+    <rect x="220" y="350" width="360" height="40" rx="3" fill="#3a3a3a"/>
+    <text x="240" y="375" class="text-color" font-size="14" font-family="Arial">Firma A</text>
+    <text x="520" y="375" class="red-accent" font-size="16" font-family="Arial" font-weight="bold">€500</text>
+    
+    <!-- Zeile 2 - Konkurrenz -->
+    <rect x="220" y="400" width="360" height="40" rx="3" fill="#3a3a3a"/>
+    <text x="240" y="425" class="text-color" font-size="14" font-family="Arial">Firma B</text>
+    <text x="520" y="425" class="red-accent" font-size="16" font-family="Arial" font-weight="bold">€450</text>
+    
+    <!-- Zeile 3 - Eber (nur als Preis) -->
+    <rect x="220" y="450" width="360" height="40" rx="3" fill="#3a3a3a" opacity="0.5"/>
+    <text x="240" y="475" class="text-color" font-size="14" font-family="Arial" opacity="0.7">Dein Betrieb</text>
+    <text x="520" y="475" class="red-accent" font-size="16" font-family="Arial" font-weight="bold">€600</text>
+    
+    <!-- Zeile 4 - Konkurrenz -->
+    <rect x="220" y="500" width="360" height="40" rx="3" fill="#3a3a3a"/>
+    <text x="240" y="525" class="text-color" font-size="14" font-family="Arial">Firma C</text>
+    <text x="520" y="525" class="red-accent" font-size="16" font-family="Arial" font-weight="bold">€480</text>
+    
+    <!-- "Nur Preise" Text -->
+    <text x="400" y="570" class="red-accent" font-size="12" font-family="Arial" text-anchor="middle" opacity="0.7">Alle gleich - nur Preise</text>
+  </g>
+  
+  <!-- Kunde -->
+  <g class="customer-enter" transform="translate(500, 150)">
+    <!-- Kunde (vereinfacht als Kreis) -->
+    <circle cx="0" cy="0" r="40" fill="#666"/>
+    <circle cx="-10" cy="-10" r="5" fill="#ffffff"/>
+    <circle cx="10" cy="-10" r="5" fill="#ffffff"/>
+    <path d="M -15,10 Q 0,15 15,10" stroke="#ffffff" stroke-width="2" fill="none" stroke-linecap="round"/>
+    
+    <!-- Kunde zeigt auf Preisvergleich -->
+    <line x1="-40" y1="0" x2="-200" y2="100" stroke="#EF4444" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  
+  <!-- Eber (Hauptcharakter) - frustriert -->
+  <g class="eber-enter" transform="translate(200, 150)">
+    <!-- Eber Körper -->
+    <ellipse cx="100" cy="200" rx="80" ry="100" class="eber-body"/>
+    <path d="M 100,100 Q 80,80 60,100 Q 50,110 60,120 Q 70,115 80,120 Q 90,115 100,120 Q 110,115 120,120 Q 130,115 140,120 Q 150,110 140,100 Q 120,80 100,100" class="eber-body"/>
+    
+    <!-- Eber Augen - frustriert -->
+    <path d="M 85,180 Q 90,185 95,180" stroke="#01FAF9" stroke-width="3" fill="none" stroke-linecap="round"/>
+    <path d="M 105,180 Q 110,185 115,180" stroke="#01FAF9" stroke-width="3" fill="none" stroke-linecap="round"/>
+    
+    <!-- Eber Schnauze -->
+    <ellipse cx="100" cy="200" rx="25" ry="20" class="eber-accent"/>
+    <ellipse cx="95" cy="195" rx="5" ry="5" fill="#021A33"/>
+    <ellipse cx="105" cy="195" rx="5" ry="5" fill="#021A33"/>
+    
+    <!-- Eber Stoßzähne -->
+    <path d="M 90,210 L 85,220 L 90,215 Z" fill="#ffffff"/>
+    <path d="M 110,210 L 115,220 L 110,215 Z" fill="#ffffff"/>
+    
+    <!-- Eber Umriss -->
+    <ellipse cx="100" cy="200" rx="80" ry="100" class="eber-outline"/>
+    <path d="M 100,100 Q 80,80 60,100 Q 50,110 60,120 Q 70,115 80,120 Q 90,115 100,120 Q 110,115 120,120 Q 130,115 140,120 Q 150,110 140,100 Q 120,80 100,100" class="eber-outline"/>
+  </g>
+  
+  <!-- Red Glow -->
+  <circle cx="400" cy="450" r="250" fill="#EF4444" opacity="0.1">
+    <animate attributeName="opacity" values="0.1;0.15;0.1" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg>

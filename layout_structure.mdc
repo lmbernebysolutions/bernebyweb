@@ -1,0 +1,42 @@
+# Layout-Struktur: Location Landing Page
+
+Die Seite `/dachdecker/[stadt]` muss folgende Sektionen in dieser Reihenfolge enthalten:
+
+## [cite_start]1. Sticky Header [cite: 42]
+* Logo links, Navigation rechts.
+* Wichtig: Ein prominenter "Notdienst"-Button (Akzentfarbe) muss immer sichtbar sein.
+* [cite_start]Implementierung: `position: sticky; top: 0;`[cite: 43].
+
+## [cite_start]2. Hero-Sektion (Full-Screen) [cite: 4]
+* **Hintergrund:** Ein abgedunkeltes Bild eines Dachdeckers bei der Arbeit (Authentizität).
+* **Headline:** Dynamisch! "Ihr zuverlässiger Dachdecker in {Stadt}".
+* **CTA:** Großes Formular oder Button "Kostenloses Angebot anfordern".
+* **Trust-Elemente:** Kleine Badges unter dem CTA ("Meisterbetrieb", "24h Service").
+
+## [cite_start]3. Breadcrumbs [cite: 38]
+* Platziert direkt unter dem Hero.
+* Pfad: `Home > Leistungen > Dachdecker > {Stadt}`.
+* Dient der SEO und Orientierung.
+
+## [cite_start]4. Feature-Liste (3-Spalten Grid) [cite: 66]
+* "Warum uns wählen?"
+* Nutze Icons für: "Schnelle Anfahrt in {Stadt}", "Transparenter Preis", "Garantierte Qualität".
+* Layout: Nutze CSS Grid, das auf Mobile zu einer Spalte stapelt (Stack).
+
+## 5. Lokaler Content-Block (SEO Text)
+* Ein Textabschnitt, der spezifisch auf `{Stadt}` eingeht (generiert durch MDX/Spintax).
+* Hier werden Keywords wie "Dachreparatur {Stadt}", "Sturmschaden {Stadt}" platziert.
+
+## [cite_start]6. Dienstleistungen (Card Grid) [cite: 103]
+* Kacheln für: "Dachreparatur", "Dachrinnenreinigung", "Dämmung".
+* Jede Karte verlinkt auf eine Detailseite.
+
+## [cite_start]7. FAQ-Sektion (Accordion) [cite: 55]
+* "Wie schnell sind Sie in {Stadt}?"
+* "Was kostet eine Dachinspektion?"
+* Nutze ein Akkordeon-Muster, um Platz zu sparen.
+
+## 8. Kontakt-Sektion & Footer
+* Großes Kontaktformular (Name, Telefon, Problem).
+* Google Maps Embed (zentriert auf {Stadt} Koordinaten, falls verfügbar).
+* Footer mit Links zu Impressum, Datenschutz und allen anderen Orten ("Wir sind auch in...").
