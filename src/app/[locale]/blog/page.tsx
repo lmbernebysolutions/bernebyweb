@@ -1,6 +1,6 @@
 import { BlogIndex } from "@/components/sections/blog-index";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/ui/navbar";
+import { Footer } from "@/components/sections/footer";
 
 export default function BlogPage() {
     return (

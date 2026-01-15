@@ -1,6 +1,6 @@
 import { BlogArticle } from "@/components/blog/blog-article";
-import { Navbar } from "@/components/layout/navbar";
-import { Footer } from "@/components/layout/footer";
+import { Navbar } from "@/components/ui/navbar";
+import { Footer } from "@/components/sections/footer";
 import { BLOG_POSTS } from "@/components/sections/blog-index";
 import { notFound } from "next/navigation";
 

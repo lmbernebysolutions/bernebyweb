@@ -1,6 +1,6 @@
 import { Metadata } from "next";
 import Link from "next/link";
-import { StickyHeader } from "@/components/layout/StickyHeader";
+import { Navbar } from "@/components/ui/navbar";
 import { cities } from "@/features/location-page/data/cities";
 
 const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || "https://dachdecker-meisterbetrieb.de";
@@ -36,7 +36,7 @@ export default function DachdeckerOverviewPage() {
 
   return (
     <>
-      <StickyHeader />
+      <Navbar />
 
       <main>
         {/* Hero */}

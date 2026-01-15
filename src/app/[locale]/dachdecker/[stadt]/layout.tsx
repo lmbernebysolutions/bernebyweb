@@ -1,5 +1,5 @@
-import { StickyHeader } from "@/components/layout/StickyHeader";
-import { Footer } from "@/components/layout/Footer";
+import { Navbar } from "@/components/ui/navbar";
+import { Footer } from "@/components/sections/footer";
 
 /**
  * Layout für dynamische Orts-Seiten
@@ -14,7 +14,7 @@ export default function LocationPageLayout({
   return (
     <>
       {/* 1. Sticky Header */}
-      <StickyHeader />
+      <Navbar />
       
       <main>{children}</main>
       
